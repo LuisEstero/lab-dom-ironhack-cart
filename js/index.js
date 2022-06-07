@@ -24,8 +24,9 @@ return subtotalElemt.innerText;
 
 
 
-function newFunction() {
-  console.log('Calculating subtotal, yey!');
+console.log('Calculating subtotal, yey!');
+
+
 }
 
 function calculateAll() {
@@ -35,10 +36,18 @@ function calculateAll() {
   
   const singleProduct = document.querySelector('.product');
   updateSubtotal(singleProduct);
+  let subtotal = subtotalElemt(singleProduct);
+  let totlaElemet = document.querySelector('#total-value span');
+  totlaElemet.innerText = subtotal;
   // end of test
 
   // ITERATION 2
-  //... your code goes here
+  const allItems = document.querySelectorAll(".product");
+  allItems.forEach((intem)=> {
+    let subtotal = updateSubtotal(item);
+    sumtorio += subtotal
+  })
+    
 
   // ITERATION 3
   //... your code goes here
